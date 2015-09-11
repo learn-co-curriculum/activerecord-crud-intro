@@ -3,8 +3,8 @@
 ## Objectives
 
 
-1. Understand CRUD.
-2. Get familiar with how to use CRUD.
+1. Understand CRUD - Create, Read, Update, and Delete.
+2. Get familiar with how to use ActiveRecord methods for Crud.
 
 ## What is CRUD?
 
