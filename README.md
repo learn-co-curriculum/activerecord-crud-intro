@@ -35,7 +35,7 @@ cat.age = 3
 cat.save
 ```
 
-The `create` Method will create and save the object to the database.
+The `create` Method will create an object with its attributes and save it to the database.
 
 ```ruby
 cat = Cat.create(name: "Maru", age: 3)
@@ -57,7 +57,7 @@ If you only want to get the first entry in your database.
 cat = Cat.first
 ```
 
-When you are looking for a specific attribute, but keep in mind this will return the first entry that it finds in the database.
+When you are looking for a specific attribute you can use the `find_by` method, but keep in mind this will only return the first entry that it finds.
 
 ```ruby
 maru = Cat.find_by(name: "Maru")
@@ -86,3 +86,10 @@ hannah.update(name: "Hannah")
 ```
 
 ### Delete
+
+Likewise, after retrieving an ActiveRecord object, the object can be destroyed.
+
+```ruby
+hannah = Cat.where(name: 'Hannah') 
+hannah.destroy
+```
