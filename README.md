@@ -63,12 +63,26 @@ When you are looking for a specific attribute, but keep in mind this will return
 maru = Cat.find_by(name: "Maru")
 ```
 
-Like SQL we can also use the `where` method in activerecord.
+Like SQL we can also use the `where` method in ActiveRecord.
 
 ```ruby
 cat = Cat.where('age > 2')
 ```
 
 ### Update
+
+After retrieving an ActiveRecord object, we can also modify its attributes. 
+
+```ruby
+hannah = Cat.where(name: 'Hana') 
+hannah.name = "Hannah"
+hannah.save
+```
+Notice that after changing the attribute we also have to persist the new name in the database by using the save method. Or we could use the `update` method that comes with the ActiveRecord API.
+
+```ruby
+hannah = Cat.where(name: 'Hana') 
+hannah.update(name: "Hannah")
+```
 
 ### Delete
