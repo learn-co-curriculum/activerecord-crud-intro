@@ -14,9 +14,6 @@ CRUD is an acronym for the four verbs we use to operate on data: **C**reate, **R
 
 To create new objects, we can either use the `new` or `create` method. 
 
-
-##### The `new` Method
-
 The `new` method will create a new object without any attributes.
 
 ```ruby
@@ -37,7 +34,6 @@ cat.name = "Maru"
 cat.age = 3
 cat.save
 ```
-##### The `create` Method
 
 The `create` Method will create and save the object to the database.
 
@@ -46,6 +42,32 @@ cat = Cat.create(name: "Maru", age: 3)
 ```
 
 ### Read
+
+Active Record provides us with different methods to retrieve data from the database.
+
+To get a collection of all cats, we will use the `all` method.
+
+```ruby
+cats = Cat.all
+```
+
+If you only want to get the first entry in your database.
+
+```ruby
+cat = Cat.first
+```
+
+When you are looking for a specific attribute, but keep in mind this will return the first entry that it finds in the database.
+
+```ruby
+maru = Cat.find_by(name: "Maru")
+```
+
+Like SQL we can also use the `where` method in activerecord.
+
+```ruby
+cat = Cat.where('age > 2')
+```
 
 ### Update
 
