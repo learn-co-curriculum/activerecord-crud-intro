@@ -103,3 +103,4 @@ If we want to delete all the cats from out database, we can use the ActiveRecord
 Cat.destroy_all
 ```
 This will delete each row in our table.
+<a href='https://learn.co/lessons/activerecord-crud-intro' data-visibility='hidden'>View this lesson on Learn.co</a>
